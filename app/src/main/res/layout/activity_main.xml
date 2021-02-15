@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/bg_wave"
+        android:background="@color/bg_color_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/app_title"/>
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/board"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="48dp"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_baseline_add_24"
+        android:backgroundTint="@color/new_game_button_color"
+        android:onClick="btnClearPressed"
+        android:text="@string/new_game_title"
+        android:drawableLeft="@drawable/ic_baseline_add_24" />
+
+    <LinearLayout
+        android:id="@+id/container_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/board"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical"
+        android:layout_marginRight="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_remaining"
+            android:textColor="@color/white" />
+        <Chronometer
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timer"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_baseline_pause_24"
+            android:drawableLeft="@drawable/ic_baseline_pause_24"
+            android:gravity="end"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <com.example.sudokusolverapp.Board
+        android:id="@+id/board"
+        custom:boardColor="@color/new_game_button_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        custom:cellFillColor="@color/fillColor"
+        custom:cellHighlightColor="@color/highlightColor"
+        custom:letterColor="@color/black"
+        custom:letterColorSolve="@color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/bg_wave"
+        android:layout_marginTop="-32dp">
+    </com.example.sudokusolverapp.Board>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/num_container"
+        android:layout_below="@id/board"
+        android:layout_margin="16dp"
+        android:weightSum="9"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnOnePressed"
+            android:text="@string/one"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnTwoPressed"
+            android:text="@string/two"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnThreePressed"
+            android:text="@string/three"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnFourPressed"
+            android:text="@string/four"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnFivePressed"
+            android:text="@string/five"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnSixPressed"
+            android:text="@string/six"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnSevenPressed"
+            android:text="@string/seven"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnEightPressed"
+            android:text="@string/eight"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnNinePressed"
+            android:text="@string/nine"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_solve"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/solve_me_button_color"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="btnSolvePressed"
+        android:text="@string/resolve_me_title"/>
+
+</RelativeLayout>

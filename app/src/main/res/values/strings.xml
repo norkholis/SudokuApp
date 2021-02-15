@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SudokuSolverApp</string>
+
+    <string name="resolve_me_title">Resolve Me!</string>
+    <string name="app_title">Sudoku Solver App</string>
+    <string name="new_game_title">New Game</string>
+    <string name="time_remaining">Time Remaining</string>
+    <string name="new_game_first">Pilih new game terlebih dahulu</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+</resources>
